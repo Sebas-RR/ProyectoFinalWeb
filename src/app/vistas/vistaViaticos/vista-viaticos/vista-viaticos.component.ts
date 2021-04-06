@@ -10,8 +10,8 @@ import { ServiceViaticosService } from '../service/service-viaticos.service';
 export class VistaViaticosComponent implements OnInit {
 
   public viatico: ViaticoModel[] = [];
-  public fechaIni: Date;
-  public fechaFin: Date | undefined ;
+  public fechaIni: Date = new Date();
+  public fechaFin: Date = new Date();
 
   constructor(private viaticosService: ServiceViaticosService) { }
 
