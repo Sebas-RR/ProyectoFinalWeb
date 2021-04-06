@@ -14,8 +14,6 @@ import { VistaViaticosComponent } from './vistas/vistaViaticos/vista-viaticos/vi
 import { VistaCajaComponent } from './vistas/vistaCaja/vista-caja/vista-caja.component';
 
 import { HttpClientModule } from '@angular/common/http';
-import { AppRoutingModule } from './app-routing.module';
-
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
@@ -34,9 +32,8 @@ import { FormsModule } from '@angular/forms';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
