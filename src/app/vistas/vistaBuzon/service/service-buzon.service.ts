@@ -8,11 +8,8 @@ import { Observable } from 'rxjs';
 })
 export class ServiceBuzonService {
 
-  buzons: Array<any> | undefined;
-
   constructor(private http: HttpClient) { }
   public obtenerClients(): Observable<any>{
     return this.http.get('http://localhost:9898/api/buzon/list');
   }
-
 }

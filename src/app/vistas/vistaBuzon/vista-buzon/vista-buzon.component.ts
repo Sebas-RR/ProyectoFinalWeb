@@ -8,7 +8,6 @@ import { ServiceBuzonService } from '../service/service-buzon.service';
 })
 export class VistaBuzonComponent implements OnInit {
   
-  filterBuzon = "";
   listbuzon: Array<any> | undefined;
   constructor(
     private service: ServiceBuzonService
