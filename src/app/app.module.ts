@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import {HttpClientModule} from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppComponent } from './app.component';
 import { VistaProveedoresComponent } from './vistas/vistaproveedor/vista-proveedores/vista-proveedores.component';
 import { VistaArticulosComponent } from './vistas/vistaArticulos/vista-articulos/vista-articulos.component';
@@ -13,7 +12,6 @@ import { VistaComprasComponent } from './vistas/vistacompras/vista-compras/vista
 import { VistaPersonasComponent } from './vistas/vistaPersonas/vista-personas/vista-personas.component';
 import { VistaViaticosComponent } from './vistas/vistaViaticos/vista-viaticos/vista-viaticos.component';
 import { VistaCajaComponent } from './vistas/vistaCaja/vista-caja/vista-caja.component';
-
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
