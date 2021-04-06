@@ -1,19 +1,13 @@
 import { Injectable } from '@angular/core';
-<<<<<<< Updated upstream
-=======
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
->>>>>>> Stashed changes
 
 @Injectable({
   providedIn: 'root'
 })
 export class ServiceTipoArticuloService {
 
-<<<<<<< Updated upstream
-  constructor() { }
-=======
   constructor(private http: HttpClient) { }
 
   public obtenerTiposArticulo():Observable<any> {
@@ -46,6 +40,5 @@ export class ServiceTipoArticuloService {
 
     return throwError(errorMessage);
   }
->>>>>>> Stashed changes
 }
 

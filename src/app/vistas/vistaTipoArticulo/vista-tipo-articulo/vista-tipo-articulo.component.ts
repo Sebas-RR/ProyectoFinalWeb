@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ServiceTipoArticuloService } from '../service/service-tipo-articulo.service';
+import { tipoArticuloModel, RespuestaTipoArticulo } from '../../../models/tipoArticulo';
 
 @Component({
   selector: 'app-vista-tipo-articulo',
@@ -7,13 +9,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VistaTipoArticuloComponent implements OnInit {
 
-<<<<<<< Updated upstream
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
-=======
   Tipos: tipoArticuloModel[] = [];
   public d1: string = '0000-00-00';
   public d2: string = '0000-00-00';
@@ -39,5 +34,4 @@ export class VistaTipoArticuloComponent implements OnInit {
       console.log(res);
     })
   }
->>>>>>> Stashed changes
 }
