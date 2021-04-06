@@ -25,7 +25,7 @@ export class VistaBuzonComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.obtenerClients();
+    this.obtenerClients()
 
   }
 
@@ -34,7 +34,7 @@ export class VistaBuzonComponent implements OnInit {
       this.listbuzon = response;
     });
   }
-  private obtenerBuzonFecha(desde: string, hasta:string): void{
+  private obtenerBuzonFecha(desde: string, hasta: string): void{
     this.service.obtenerBuzonFecha(desde,hasta).subscribe(response=> {
       this.listbuzon = response;
     })
