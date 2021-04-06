@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import {HttpClientModule} from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
@@ -28,7 +29,8 @@ import { VistaCajaComponent } from './vistas/vistaCaja/vista-caja/vista-caja.com
     VistaCajaComponent
   ],
   imports: [
-    BrowserModule
+    HttpClientModule,
+    BrowserModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
