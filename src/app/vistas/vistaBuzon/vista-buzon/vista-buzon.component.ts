@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { BuzonModel } from 'src/app/models/buzon-model';
 import { ServiceBuzonService } from '../service/service-buzon.service';
+
+
 
 @Component({
   selector: 'app-vista-buzon',
@@ -7,14 +10,23 @@ import { ServiceBuzonService } from '../service/service-buzon.service';
   styleUrls: ['./vista-buzon.component.css']
 })
 export class VistaBuzonComponent implements OnInit {
-  
-  listbuzon: Array<any> | undefined;
+
+
+ 
+  listbuzon: BuzonModel[] | undefined;
+  listaBuzonFecha: Array<BuzonModel> = [];
+  desde: string = "";
+  hasta: string = "";
+
+
   constructor(
     private service: ServiceBuzonService
   ) { }
 
+
   ngOnInit(): void {
     this.obtenerClients();
+
   }
 
   private obtenerClients(){
@@ -22,5 +34,14 @@ export class VistaBuzonComponent implements OnInit {
       this.listbuzon = response;
     });
   }
+  private obtenerBuzonFecha(desde: string, hasta:string): void{
+    this.service.obtenerBuzonFecha(desde,hasta).subscribe(response=> {
+      this.listbuzon = response;
+    })
+
+  }
+
+ 
 
 }
+
