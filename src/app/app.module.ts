@@ -13,6 +13,8 @@ import { VistaPersonasComponent } from './vistas/vistaPersonas/vista-personas/vi
 import { VistaViaticosComponent } from './vistas/vistaViaticos/vista-viaticos/vista-viaticos.component';
 import { VistaCajaComponent } from './vistas/vistaCaja/vista-caja/vista-caja.component';
 
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +30,8 @@ import { VistaCajaComponent } from './vistas/vistaCaja/vista-caja/vista-caja.com
     VistaCajaComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
