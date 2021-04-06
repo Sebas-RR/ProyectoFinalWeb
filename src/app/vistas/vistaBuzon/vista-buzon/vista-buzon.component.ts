@@ -15,8 +15,8 @@ export class VistaBuzonComponent implements OnInit {
  
   listbuzon: BuzonModel[] | undefined;
   listaBuzonFecha: Array<BuzonModel> = [];
-  desde: string = "";
-  hasta: string = "";
+  desde: string = "2021-04-03";
+  hasta: string = "2021-04-05";
 
 
   constructor(
