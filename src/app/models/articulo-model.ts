@@ -4,6 +4,7 @@ export class ArticuloModel {
     nombre: string;
     precioVenta: number;
     precioCompra: number;
+    // tipoArticulo: tipoArticuloModel
 
     constructor() {
         this.id = 0;
@@ -11,5 +12,19 @@ export class ArticuloModel {
         this.nombre = "";
         this.precioVenta = 0;
         this.precioCompra = 0;
+    }
+}
+
+export class RespuestaArticulo{
+    codigo: String;
+    mensaje: String;
+    estado: number;
+    objecto_respuesta: Array<ArticuloModel>
+
+    constructor(){
+        this.codigo = " ";
+        this.mensaje = " ";
+        this.estado = 0;
+        this.objecto_respuesta= [];
     }
 }
