@@ -3,25 +3,17 @@
       <table class="table table-dark">
           <thead>
               <td>Id</td>
-              <td>TIPO</td>
+              <td>Tipo</td>
               <td>Contenido</td>
-              <td>Apellidos</td>
-              <td>Fecha</td>                                         
+              <td>Fecha</td>
+                                                     
           </thead>
           <tbody>
               <tr *ngFor="let buzon of listbuzon">
                   <td>{{buzon.id}}</td>
                   <td>{{buzon.tipo}}</td>
                   <td>{{buzon.contenido}}</td>
-                  <td>{{buzon.fecha}}</td>
-                  <td>
-                      <div class="row">
-                          <div class="col-md-4"><button class="btn btn-warning btn-sm" >Edit</button></div>
-                          <div class="col-md-4"><button class="btn btn-danger btn-sm" >Delete</button></div>                    
-                          <div class="col-md-4"><button class="btn btn-primary btn-sm" >Show</button></div>                    
-                      </div>  
-                  </td>
-                  
+                  <td>{{buzon.fecha}}</td>                  
               </tr>
   
   
