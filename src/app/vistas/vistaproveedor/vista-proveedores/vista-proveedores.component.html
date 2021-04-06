@@ -1,0 +1,54 @@
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-3">
+            <span>Fecha Inicial: </span>
+            <input type="date" [(ngModel)]="fechaIni">
+        </div>
+        <div class="col-3">
+            <span>Fecha Final:  </span>
+            <input type="date" [(ngModel)]="fechaFin">
+        </div>
+        <div class="col-3">
+            <button type="button" class="btn btn-primary" (click)="getProveedoresService(fechaIni, fechaFin)">Consultar</button>
+        </div>
+    </div>
+</div>
+<br>
+<ng-container *ngIf="proveedores.length >= 1">
+  <table class="table table-dark table-hover">
+      <thead>
+          <tr>
+              <th scope="col">#</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Departamento</th>
+              <th scope="col">Ciudad</th>
+              <th scope="col">Telefono</th>
+              <th scope="col">Responsabilidad Fiscal</th>
+              <th scope="col">Correo</th>
+              <th scope="col">Contacto</th>
+              <th scope="col">Direccion</th>
+              <th scope="col">FechaCreacion</th>
+              <th scope="col">Nit</th>
+          </tr>
+      </thead>
+      <tbody>
+          <ng-container *ngFor="let proveedor of proveedores">
+              <tr>
+                  <th>{{proveedor.id}}</th>
+                  <td>{{proveedor.nombre}}</td>
+                  <td>{{proveedor.departamento}}</td>
+                  <td>{{proveedor.ciudad}}</td>
+                  <td>{{proveedor.telefono}}</td>
+                  <td>{{proveedor.responsabilidadFiscal}}</td>
+                  <td>{{proveedor.correo}}</td>
+                  <td>{{proveedor.contacto}}</td>
+                  <td>{{proveedor.direccion}}</td>
+                  <td>{{proveedor.fechaCreacion}}</td>
+                  <td>{{proveedor.nit}}</td>
+              </tr>
+          </ng-container>
+      </tbody>
+  </table>
+
+</ng-container>
