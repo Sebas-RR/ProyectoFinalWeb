@@ -12,6 +12,7 @@ import { VistaPersonasComponent } from './vistas/vistaPersonas/vista-personas/vi
 import { VistaViaticosComponent } from './vistas/vistaViaticos/vista-viaticos/vista-viaticos.component';
 import { VistaCajaComponent } from './vistas/vistaCaja/vista-caja/vista-caja.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,7 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     HttpClientModule,
-    
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
