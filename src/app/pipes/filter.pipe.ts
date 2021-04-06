@@ -5,9 +5,15 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class FilterPipe implements PipeTransform {
 
-  transform(value: any, arg: any): any[] {
-    if(!arg) return value
-    return value.filter(buzon.contenido.includes(arg))
+  transform(list: any[] | null , filter: string | null): any[] {
+    if (!list) {
+      return [];
+    }
+    if (!filter) {
+      return list;
+    }
+    return list.filter((buzon: any) => buzon.name.toUpperCase().includes(filter.toLocaleUpperCase()));
+  }
   }
 
-}
+
