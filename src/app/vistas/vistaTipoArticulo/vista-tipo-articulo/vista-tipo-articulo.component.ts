@@ -7,7 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VistaTipoArticuloComponent implements OnInit {
 
-  constructor() { }
+  Tipos: Array<tipoArticuloModel>;
+
+  constructor(private serviceTipoArticulo: ServiceTipoArticuloService) { }
 
   ngOnInit(): void {
   }
