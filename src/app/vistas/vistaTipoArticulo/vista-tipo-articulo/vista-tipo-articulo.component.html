@@ -1,20 +1,67 @@
 <div>
-    <table class="table table-dark">
+  <div class="card">
+    <div class="card-header">
+      <table class="table table-dark table-hover">
         <thead>
+<<<<<<< Updated upstream
           ...
         </thead>
         <tbody>
           <tr class="table-active">
             ...
-          </tr>
+=======
           <tr>
-            ...
+            <th>Nombre Tipo de Articulo</th>
+            <th>Referencia</th>
+            <th>Unidad de medida</th>
+            <th>Fecha de creacion</th>
           </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td colspan="2" class="table-active">Larry the Bird</td>
-            <td>@twitter</td>
+        </thead>
+        <tbody>
+          <tr *ngFor="let Tipo of this.Tipos">
+            <td>{{Tipo.nombreTA}}</td>
+            <td>{{Tipo.referencia}}</td>
+            <td>{{Tipo.unidadDeMedida}}</td>
+            <td>{{Tipo.fechaDeCreacion}}</td>
+>>>>>>> Stashed changes
           </tr>
         </tbody>
       </table>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-body">
+      <form>
+        <label for="inicial" class="d-flex p-2 bd-highlight ml-3">Fecha inicial: </label>
+        <input type="date" id="inicial" name="inicial" [(ngModel)]="d1" class="d-flex p-2 bd-highlight ml-3">
+        <label for="final" class="d-flex p-2 bd-highlight ml-3">Fecha final: </label>
+        <input type="date" id="final" name="final" [(ngModel)]="d2" class="d-flex p-2 bd-highlight ml-3">
+        <button (click)="obtenerTiposArticuloFecha(d1,d2)" class="btn btn-dark mt-3 ml-3">Consultar</button>
+      </form>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-body">
+      <table class="table table-dark table-hover">
+        <thead>
+          <tr>
+            <th>Nombre Tipo de Articulo</th>
+            <th>Referencia</th>
+            <th>Unidad de medida</th>
+            <th>Fecha de creacion</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let Tipo of this.TiposFechas">
+            <td>{{Tipo.nombreTA}}</td>
+            <td>{{Tipo.referencia}}</td>
+            <td>{{Tipo.unidadDeMedida}}</td>
+            <td>{{Tipo.fechaDeCreacion}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
 </div>
+

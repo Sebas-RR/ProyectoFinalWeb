@@ -13,6 +13,12 @@ import { VistaPersonasComponent } from './vistas/vistaPersonas/vista-personas/vi
 import { VistaViaticosComponent } from './vistas/vistaViaticos/vista-viaticos/vista-viaticos.component';
 import { VistaCajaComponent } from './vistas/vistaCaja/vista-caja/vista-caja.component';
 
+<<<<<<< Updated upstream
+=======
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+
+>>>>>>> Stashed changes
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +34,13 @@ import { VistaCajaComponent } from './vistas/vistaCaja/vista-caja/vista-caja.com
     VistaCajaComponent
   ],
   imports: [
+<<<<<<< Updated upstream
     BrowserModule
+=======
+    BrowserModule,
+    HttpClientModule,
+    FormsModule
+>>>>>>> Stashed changes
   ],
   providers: [],
   bootstrap: [AppComponent]
