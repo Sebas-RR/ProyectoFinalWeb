@@ -25,7 +25,6 @@ export class ViaticosModel {
     this.valor=0;
     this.tipoGasto="";
     this.fecha=new Date();
-    //this.persona = null;
   }
 
 }

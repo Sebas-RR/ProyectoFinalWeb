@@ -1,52 +1,39 @@
-<html>
-  <head>
-    <style>
-      .myDiv {
-        border: 5px outset red;
-        background-color: lightblue;
-        text-align: center;
-      }
-    </style>
-  </head>
-  <body>
-    <br>
-      <div class="container">
-          <div class="row">
-              <div class="col-3">
-                  <span>Fecha Inicial: </span>
-                  <input type="date" [(ngModel)]="fechaIni">
-              </div>
-              <div class="col-3" >
-                  <span >Fecha Final:  </span>
-                  <input type="date" [(ngModel)]="fechaFin">
-              </div>
-              <div class="col-3">
-                  <button type="button" class="btn btn-primary" (click)="obtenerViaticosFechas(fechaIni, fechaFin)">Consultar</button>
-              </div>
-          </div>
+<br>
+  <div class="container">
+    <div class="row">
+      <div class="col-3">
+        <span>Fecha Inicial: </span>
+        <input type="date" [(ngModel)]="fechaIni">
       </div>
-      <table class="table table-dark table-hover">
-        <thead>
+      <div class="col-3" >
+        <span >Fecha Final:  </span>
+        <input type="date" [(ngModel)]="fechaFin">
+      </div>
+      <div class="col-3">
+        <button type="button" class="btn btn-primary" (click)="obtenerViaticosFechas(fechaIni, fechaFin)">Consultar</button>
+      </div>
+    </div>
+  </div>
+  <table class="table table-dark table-hover">
+    <thead>
+      <tr>
+        <th>Id viatico</th>
+        <th>Valor viatico</th>
+        <th>Tipo de viatico</th>
+        <th>Fecha de creacion</th>
+        <th>Usuario que autorizo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let viatico of viaticos">
           <tr>
-            <th>Id viatico</th>
-            <th>Valor viatico</th>
-            <th>Tipo de viatico</th>
-            <th>Fecha de creacion</th>
-            <th>Usuario que autorizo</th>
+            <td>{{viatico.id}}</td>
+            <td>{{viatico.valor}}</td>
+            <td>{{viatico.tipoGasto}}</td>
+            <td>{{viatico.fecha}}</td>
+            <!--<td>{{viatico.usuarioAutorizo.nombre}}</td>-->
           </tr>
-        </thead>
-        <tbody>
-          <ng-container *ngFor="let viatico of viaticos">
-              <tr>
-                <td>{{viatico.id}}</td>
-                <td>{{viatico.valor}}</td>
-                <td>{{viatico.tipoGasto}}</td>
-                <td>{{viatico.fecha}}</td>
-                <!--<td>{{viatico.usuarioAutorizo.nombre}}</td>-->
-              </tr>
-          </ng-container>
-        </tbody>
-      </table>
-    <br>
-  </body>
-</html>
+      </ng-container>
+    </tbody>
+  </table>
+<br>
