@@ -14,6 +14,6 @@ export class ServiceBuzonService {
   }
 
   public obtenerBuzonFecha(desde: string, hasta: string): Observable<any>{
-    return this.http.get(`localhost:9898/api/buzon/findByDateRange?desde=${desde}&hasta=${hasta}`);
+    return this.http.get(`localhost:9898/api/buzon/findByRangeDate?desde=${desde}&hasta=${hasta}`);
   }
 }

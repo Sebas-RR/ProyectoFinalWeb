@@ -25,7 +25,7 @@ export class VistaBuzonComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.obtenerClients()
+    this.obtenerBuzonFecha("2021-04-03","2021-04-05");
 
   }
 
