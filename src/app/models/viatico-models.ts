@@ -1,3 +1,5 @@
+import { personasModel } from "./personas-models";
+
 export class RespuestaViaticos {
   codigo: string;
   mensaje: string;
@@ -17,7 +19,7 @@ export class ViaticosModel {
   valor:number;
   tipoGasto:string;
   fecha:Date;
-  //persona:PersonaModel;
+  usuarioAutorizo!:personasModel;
   
 
   constructor(){
