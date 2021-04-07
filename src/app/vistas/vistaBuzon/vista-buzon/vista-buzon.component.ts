@@ -15,8 +15,8 @@ export class VistaBuzonComponent implements OnInit {
  
   listbuzon: BuzonModel[] | undefined;
   listaBuzonFecha: Array<BuzonModel> = [];
-  desde: string = "2021-04-03";
-  hasta: string = "2021-04-05";
+  desde: string = "0000-00-00";
+  hasta: string = "0000-00-00";
 
 
   constructor(
@@ -25,7 +25,8 @@ export class VistaBuzonComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.obtenerBuzonFecha("2021-04-03","2021-04-05");
+    return this.obtenerClients()
+    
 
   }
 
@@ -34,12 +35,14 @@ export class VistaBuzonComponent implements OnInit {
       this.listbuzon = response;
     });
   }
-  private obtenerBuzonFecha(desde: string, hasta: string): void{
+  obtenerBuzonFecha(desde: string, hasta: string): void{
+    
     this.service.obtenerBuzonFecha(desde,hasta).subscribe(response=> {
       this.listbuzon = response;
     })
 
   }
+  
 
  
 
