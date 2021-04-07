@@ -14,7 +14,7 @@ import { VistaCajaComponent } from './vistas/vistaCaja/vista-caja/vista-caja.com
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule} from './app-routing.module';
-import {NgxPaginationModule} from 'ngx-pagination';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +35,6 @@ import {NgxPaginationModule} from 'ngx-pagination';
     HttpClientModule,
     FormsModule,
     AppRoutingModule,
-    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]
