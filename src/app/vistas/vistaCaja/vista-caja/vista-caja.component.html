@@ -1,22 +1,37 @@
-<div class="StyloDivTable">
-  <table class="table table-dark">
-      <thead>
-       <tr>
-           <td>Nombre Caja</td>
-           <td>Ubicacion</td>
-           <td>Observacion</td>
-           <td>Sede</td>
-           <td>Fecha Creacion</td>
-       </tr>
-      </thead>
-      <tbody>
-          <tr *ngFor="let Caja of listacajas">
-              <td>{{Caja.nombrecaja}}</td>
-              <td>{{Caja.ubicacion}}</td>
-              <td>{{Caja.observacion}}</td>
-              <td>{{Caja.sede}}</td>
-              <td>{{Caja.fechaCreacion}}</td>
-          </tr>
-      </tbody>
-    </table>
-</div>
+    <div class="card">
+      <div class="card-body">
+        <form>
+          <label for="inicial" class="d-flex p-2 bd-highlight ml-3">Fecha inicial: </label>
+          <input type="date" id="inicial" name="inicial" [(ngModel)]="fechaIni" class="d-flex p-2 bd-highlight ml-3">
+          <label for="final" class="d-flex p-2 bd-highlight ml-3">Fecha final: </label>
+          <input type="date" id="final" name="final" [(ngModel)]="fechaFin" class="d-flex p-2 bd-highlight ml-3">
+          <button (click)="listarfechas(fechaIni,fechaFin)" class="btn btn-dark mt-3 ml-3">Consultar</button>
+        </form>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <table class="table table-dark table-hover">
+          <thead>
+            <tr>
+              <th>Nombre Caja</th>
+              <th>Ubicacion</th>
+              <th>Observacion</th>
+              <th>Sede</th>
+              <th>Fecha de creacion</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let Caja of this.TiposFechas">
+                <td>{{Caja.nombrecaja}}</td>
+                <td>{{Caja.ubicacion}}</td>
+                <td>{{Caja.observacion}}</td>
+                <td>{{Caja.sede}}</td>
+                <td>{{Caja.fechaCreacion}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+  
+    </div>
+  
