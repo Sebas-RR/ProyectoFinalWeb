@@ -1,20 +1,26 @@
 <div>
     <table class="table table-dark">
         <thead>
-          ...
+          <tr>
+            <td>Nombre </td>
+            <td>Apellidos</td>
+            <td>Rol</td>
+            <td>Nacimiento</td>
+            <td>Direccion</td>
+            <td>Telefono</td>
+            <td>Email</td>
+        </tr>
         </thead>
         <tbody>
-          <tr class="table-active">
-            ...
-          </tr>
-          <tr>
-            ...
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td colspan="2" class="table-active">Larry the Bird</td>
-            <td>@twitter</td>
-          </tr>
+          <tr *ngFor = "let persona of listapersonas">
+            <td>{{persona.nombre}}</td>
+            <td>{{persona.apellidos}}</td>
+            <td>{{persona.rol}}</td>
+            <td>{{persona.nacimiento}}</td>
+            <td>{{persona.direccion}}</td>
+            <td>{{persona.telefono}}</td>
+            <td>{{persona.email}}</td>
+        </tr>
         </tbody>
       </table>
 </div>
