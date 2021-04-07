@@ -14,21 +14,10 @@
       <tr *ngFor="let articulo of listaArticulos">
         <td>{{articulo.id}}</td>
         <td>{{articulo.nombre}}</td>
+        <td>{{articulo.tipoDeArticulo.nombreTA}}</td>
         <td>{{articulo.fechaCreacion}}</td>
         <td>{{articulo.precioCompra}}</td>
         <td>{{articulo.precioVenta}}</td>
-      </tr>
-
-      <tr class="table-active">
-        ...
-      </tr>
-      <tr>
-        ...
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td colspan="2" class="table-active">Larry the Bird</td>
-        <td>@twitter</td>
       </tr>
     </tbody>
   </table>

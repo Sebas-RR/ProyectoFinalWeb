@@ -18,6 +18,7 @@ export class VistaArticulosComponent implements OnInit {
   ngOnInit(): void {
     this.obtenerArticulos();
     this.listarFecha("2021-03-28", "2021-04-07");
+    
   }
 
   private obtenerArticulos() {
@@ -29,6 +30,7 @@ export class VistaArticulosComponent implements OnInit {
   public listarFecha(fechaInicio: string, fechaFin: string): void {
     this.service.listarFechas(fechaInicio, fechaFin).subscribe((res: RespuestaArticulo) => {
       this.listaArticulos = res.objecto_respuesta;
+      console.log(this.listaArticulos);
     })
   }
 }
