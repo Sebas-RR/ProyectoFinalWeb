@@ -1,4 +1,15 @@
 <div>
+  <div class="card">
+    <div class="card-body">
+      <form>
+        <label for="inicial" class="d-flex p-2 bd-highlight ml-3">Fecha inicial: </label>
+        <input type="date" id="inicial" name="inicial" [(ngModel)]="fechaInicio" class="d-flex p-2 bd-highlight ml-3">
+        <label for="final" class="d-flex p-2 bd-highlight ml-3">Fecha final: </label>
+        <input type="date" id="final" name="final" [(ngModel)]="fechaFin" class="d-flex p-2 bd-highlight ml-3">
+        <button (click)="listarFecha(fechaInicio,fechaFin)" class="btn btn-dark mt-3 ml-3">Consultar</button>
+      </form>
+    </div>
+  </div>
   <table class="table table-dark">
     <thead>
       <tr>
@@ -11,7 +22,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let articulo of listaArticulos">
+      <tr *ngFor="let articulo of this.TiposFecha">
         <td>{{articulo.id}}</td>
         <td>{{articulo.nombre}}</td>
         <td>{{articulo.tipoDeArticulo.nombreTA}}</td>
