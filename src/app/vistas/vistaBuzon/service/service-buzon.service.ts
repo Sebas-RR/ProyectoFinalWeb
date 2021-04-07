@@ -8,12 +8,13 @@ import { Observable } from 'rxjs';
 })
 export class ServiceBuzonService {
 
+
   constructor(private http: HttpClient) { }
   public obtenerClients(): Observable<any>{
     return this.http.get('http://localhost:9898/api/buzon/list');
   }
 
   public obtenerBuzonFecha(desde: string, hasta: string): Observable<any>{
-    return this.http.get(`localhost:9898/api/buzon/findByRangeDate?desde=${desde}&hasta=${hasta}`);
+    return this.http.get(`http://localhost:9898/api/buzon/findByRangeDate?desde=${desde}&hasta=${hasta}`);
   }
 }
