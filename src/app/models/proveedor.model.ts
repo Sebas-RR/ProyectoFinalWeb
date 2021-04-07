@@ -2,7 +2,7 @@ export interface RespuestaProveedor {
   codigo: string,
   mensaje: string
   estado: number,
-  objeto_respuesta: Proveedor[]
+  objecto_respuesta: Proveedor[]
 }
 
 export interface Proveedor {
