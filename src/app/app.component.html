@@ -9,37 +9,37 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" >Home</a>
+                    <a class="nav-link" aria-current="page" [routerLink]="['']">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" >Articulos</a>
+                    <a class="nav-link" [routerLink]="['lista-articulo']">Articulos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" >Buzon</a>
+                    <a class="nav-link" [routerLink]="['lista-buzon']">Buzon</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" >Caja</a>
+                    <a class="nav-link" [routerLink]="['lista-caja']">Caja</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" >Compras</a>
+                    <a class="nav-link" [routerLink]="['lista-compra']" >Compras</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" >Devoluciones</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" >Usuarios</a>
+                    <a class="nav-link" [routerLink]="['lista-persona']">Usuarios</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" >Proveedores</a>
+                    <a class="nav-link" [routerLink]="['lista-proveedor']">Proveedores</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" >Tipos de articulos</a>
+                    <a class="nav-link" [routerLink]="['lista-tipoArticulo']" >Tipos de articulos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" >Ventas</a>
+                    <a class="nav-link" [routerLink]="['lista-venta']">Ventas</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" >Viaticos</a>
+                    <a class="nav-link" [routerLink]="['lista-viatico']">Viaticos</a>
                 </li>
             </ul>
         </div>
@@ -47,7 +47,10 @@
 </nav>
 <div style="margin-top: 20px;">
 </div>
-
-<!--
-<app-vista-proveedores></app-vista-proveedores>-->
-<app-vista-viaticos></app-vista-viaticos>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
