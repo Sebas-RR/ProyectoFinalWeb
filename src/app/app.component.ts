@@ -10,6 +10,6 @@ import { ServiceBuzonService } from './vistas/vistaBuzon/service/service-buzon.s
   
 })
 export class AppComponent {
-  title = 'proyectoAngular';
+  
 }
 

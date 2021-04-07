@@ -1,14 +1,5 @@
 import { NgModule } from '@angular/core';
-import {HttpClientModule} from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-
-import {ButtonModule} from 'primeng/button';
-import {TableModule} from 'primeng/table'
-
-
-
-
 import { AppComponent } from './app.component';
 import { VistaProveedoresComponent } from './vistas/vistaproveedor/vista-proveedores/vista-proveedores.component';
 import { VistaArticulosComponent } from './vistas/vistaArticulos/vista-articulos/vista-articulos.component';
@@ -20,8 +11,9 @@ import { VistaComprasComponent } from './vistas/vistacompras/vista-compras/vista
 import { VistaPersonasComponent } from './vistas/vistaPersonas/vista-personas/vista-personas.component';
 import { VistaViaticosComponent } from './vistas/vistaViaticos/vista-viaticos/vista-viaticos.component';
 import { VistaCajaComponent } from './vistas/vistaCaja/vista-caja/vista-caja.component';
-import { from } from 'rxjs';
-
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { AppRoutingModule} from './app-routing.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,12 +29,10 @@ import { from } from 'rxjs';
     VistaCajaComponent
   ],
   imports: [
-    HttpClientModule,
     BrowserModule,
-    BrowserAnimationsModule,
-    ButtonModule,
-    TableModule
-   
+    HttpClientModule,
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
