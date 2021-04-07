@@ -18,7 +18,8 @@ export class CajaModel{
     ubicacion: String;
     observacion: String;
     sede: String;
-   fechaCreacion: String;
+    fechaCreacion: String;
+   //persona:personas-models;
     
     constructor(){
 
