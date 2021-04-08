@@ -1,20 +1,39 @@
-<div>
-    <table class="table table-dark">
-        <thead>
-          ...
-        </thead>
-        <tbody>
-          <tr class="table-active">
-            ...
-          </tr>
+<br>
+  <div class="container">
+    <div class="row">
+      <div class="col-3">
+        <span>Fecha Inicial: </span>
+        <input type="date" [(ngModel)]="fechaIni">
+      </div>
+      <div class="col-3" >
+        <span >Fecha Final:  </span>
+        <input type="date" [(ngModel)]="fechaFin">
+      </div>
+      <div class="col-3">
+        <button type="button" class="btn btn-primary" (click)="obtenerViaticosFechas(fechaIni, fechaFin)">Consultar</button>
+      </div>
+    </div>
+  </div>
+  <table class="table table-dark table-hover">
+    <thead>
+      <tr>
+        <th>Id viatico</th>
+        <th>Valor viatico</th>
+        <th>Tipo de viatico</th>
+        <th>Fecha de creacion</th>
+        <th>Usuario que autorizo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let viatico of viaticos">
           <tr>
-            ...
+            <td>{{viatico.id}}</td>
+            <td>{{viatico.valor}}</td>
+            <td>{{viatico.tipoGasto}}</td>
+            <td>{{viatico.fecha}}</td>
+            <td>{{viatico.usuarioAutorizo.nombre}}</td>
           </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td colspan="2" class="table-active">Larry the Bird</td>
-            <td>@twitter</td>
-          </tr>
-        </tbody>
-      </table>
-</div>
+      </ng-container>
+    </tbody>
+  </table>
+<br>

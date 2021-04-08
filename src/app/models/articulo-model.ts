@@ -1,10 +1,12 @@
+import { tipoArticuloModel } from "./tipoArticulo";
+
 export class ArticuloModel {
     id: number;
     fechaCreacion: string;
     nombre: string;
     precioVenta: number;
     precioCompra: number;
-    // tipoArticulo: tipoArticuloModel
+    tipoDeArticulo!: tipoArticuloModel;
 
     constructor() {
         this.id = 0;
@@ -15,16 +17,16 @@ export class ArticuloModel {
     }
 }
 
-export class RespuestaArticulo{
+export class RespuestaArticulo {
     codigo: String;
     mensaje: String;
     estado: number;
     objecto_respuesta: Array<ArticuloModel>
 
-    constructor(){
+    constructor() {
         this.codigo = " ";
         this.mensaje = " ";
         this.estado = 0;
-        this.objecto_respuesta= [];
+        this.objecto_respuesta = [];
     }
 }

@@ -21,15 +21,12 @@ export class VistaProveedoresComponent implements OnInit {
 
   }
 
-  public getProveedoresService(fechaIni: string, fechaFin: string): void {
+  public getProveedoresService(fechaIni: string, fechaFin: string){
+    console.log(fechaIni, fechaFin);
     this.proveedoresService.getProveedores(fechaIni, fechaFin).subscribe(
-      (res: RespuestaProveedor) => {
-        this.proveedores = res.objeto_respuesta;
-      },
-      (err) => {
-        console.error('Se ha producido un error: ', err);
-      }
-    );
+      (res: RespuestaProveedor) =>{
+        this.proveedores = res.objecto_respuesta;
+        console.log(res)
+      })
   }
-
 }
