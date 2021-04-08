@@ -14,6 +14,6 @@ export class ServicePersonasService {
   }
 
   public listarfechas(fechaIni:String, fechaFin:String):Observable<any>{
-    return this.http.get(`http://localhost:9898/api/persona/listarfechas?fechaIni=${fechaIni}&fechaFin=${fechaFin}`)
+    return this.http.get(`http://localhost:9898/api/persona/listar-fechas?fechaIni=${fechaIni}&fechaFin=${fechaFin}`)
   }
 }

@@ -16,8 +16,7 @@ export class VistaPersonasComponent implements OnInit {
   constructor(private service: ServicePersonasService) { }
 
   ngOnInit(): void {
-    this.obtenerpersonas();
-    this.listarfecha("1980-12-12", "1989-01-01");
+
   }
 
   private obtenerpersonas(){
@@ -26,7 +25,7 @@ export class VistaPersonasComponent implements OnInit {
     })
   }
 
-  public listarfecha(fechaIni:String, fechaFin: String): void{
+  public listarpersonafecha(fechaIni:String, fechaFin: String) {
     this.service.listarfechas(fechaIni, fechaFin).subscribe((res:RespuestaPersonas)=>{
       this.listapersonas = res.objecto_respuesta;
     })
