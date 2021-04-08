@@ -1,3 +1,5 @@
+import { personasModel } from "./personas-models";
+
 export class RespuestaCaja{
     codigo: String;
     mensaje: String;
@@ -18,7 +20,8 @@ export class CajaModel{
     ubicacion: String;
     observacion: String;
     sede: String;
-   fechaCreacion: String;
+    fecha: String;
+    creadopor!:personasModel;
     
     constructor(){
 
@@ -26,7 +29,7 @@ export class CajaModel{
         this.ubicacion = " ";
         this.observacion = " ";
         this.sede =" ";
-        this.fechaCreacion = " ";
+        this.fecha = " ";
         
     }
 }

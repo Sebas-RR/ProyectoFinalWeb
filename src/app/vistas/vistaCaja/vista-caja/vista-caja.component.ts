@@ -12,6 +12,7 @@ export class VistaCajaComponent implements OnInit {
   listacajas: Array<CajaModel> = [];
   fechaIni: String = '0000-00-00';
   fechaFin: String = '0000-00-00';
+  TiposFechas: CajaModel[] = [];
   
   constructor(
     private service:ServiceCajaService) { }
@@ -19,7 +20,7 @@ export class VistaCajaComponent implements OnInit {
   ngOnInit(): void {
     this.obtenercajas();
     //this.inicializar();
-    this.listarfecha("2021-04-01","2021-04-07");
+    //this.listarfecha(this.fechaIni,this.fechaFin);
   }
   
  private obtenercajas() {
@@ -28,9 +29,9 @@ export class VistaCajaComponent implements OnInit {
    })
   }
 
-  public listarfecha(fechaIni:String , fechaFin: String): void {
+  public listarfechas(fechaIni:String , fechaFin: String): void {
     this.service.listarfechas(fechaIni,fechaFin).subscribe((res:RespuestaCaja )=>{
-      this.listacajas = res.objecto_respuesta;
+      this.TiposFechas = res.objecto_respuesta;
     })
   }
   
