@@ -37,7 +37,7 @@ export class VistaBuzonComponent implements OnInit {
   }
   obtenerBuzonFecha(desde: string, hasta: string): void{
     
-    this.service.obtenerBuzonFecha(desde,hasta).subscribe(response=> {
+    this.service.obtenerBuzonFecha(desde,hasta).subscribe(response => {
       this.listbuzon = response;
     })
 
