@@ -22,11 +22,9 @@ export class VistaProveedoresComponent implements OnInit {
   }
 
   public getProveedoresService(fechaIni: string, fechaFin: string){
-    console.log(fechaIni, fechaFin);
     this.proveedoresService.getProveedores(fechaIni, fechaFin).subscribe(
       (res: RespuestaProveedor) =>{
         this.proveedores = res.objecto_respuesta;
-        console.log(res)
       })
   }
 }
