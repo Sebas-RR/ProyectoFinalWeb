@@ -19,6 +19,7 @@
               <th>Observacion</th>
               <th>Sede</th>
               <th>Fecha de creacion</th>
+              <th>Creador por</th>
             </tr>
           </thead>
           <tbody>
@@ -27,7 +28,8 @@
                 <td>{{Caja.ubicacion}}</td>
                 <td>{{Caja.observacion}}</td>
                 <td>{{Caja.sede}}</td>
-                <td>{{Caja.fechaCreacion}}</td>
+                <td>{{Caja.fecha}}</td>
+                <td>{{Caja.creadopor?Caja.creadopor.nombre:' '}}</td>
             </tr>
           </tbody>
         </table>
