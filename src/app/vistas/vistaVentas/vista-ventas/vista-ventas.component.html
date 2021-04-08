@@ -1,20 +1,48 @@
-<div>
-    <table class="table table-dark">
-        <thead>
-          ...
-        </thead>
-        <tbody>
-          <tr class="table-active">
-            ...
-          </tr>
-          <tr>
-            ...
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td colspan="2" class="table-active">Larry the Bird</td>
-            <td>@twitter</td>
-          </tr>
-        </tbody>
-      </table>
-</div>
+<tr>BUSQUEDA POR FECHAS (VENTAS)</tr>
+<p></p>
+      <div class="card">
+        <div class="card-body">
+          <form>
+            <label for="inicial" class="d-flex p-2 bd-highlight ml-3">Fecha 1: </label>
+            <input type="date" id="inicial" name="inicial" [(ngModel)]="fecha1" class="d-flex p-2 bd-highlight ml-3">
+            <label for="final" class="d-flex p-2 bd-highlight ml-3">Fecha 2: </label>
+            <input type="date" id="final" name="final" [(ngModel)]="fecha2" class="d-flex p-2 bd-highlight ml-3">
+            <button (click)="listarfecha(fecha1,fecha2)" class="btn btn-dark mt-3 ml-3">Consultar</button>
+          </form>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <table class="table table-dark table-hover">
+            <thead>
+              <tr>
+                <td>Id</td>
+                <td>Nit</td>
+                <td>Direccion</td>
+                <td>Telefono</td>
+                <td>Total Venta</td>
+                <td>Dinero Recibido</td>
+                <td>Cambio</td>
+                <td>Fecha</td>
+                <td>Vendedor</td>
+            </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let Venta of this.listaventasfecha">
+                <td>{{Venta.id}}</td>
+                <td>{{Venta.nit}}</td>
+                <td>{{Venta.direccion}}</td>
+                <td>{{Venta.telefono}}</td>
+                <td>{{Venta.totalVenta}}</td>
+                <td>{{Venta.dineroRecibido}}</td>
+                <td>{{Venta.cambio}}</td>
+                <td>{{Venta.fecha}}</td>
+                <td>{{Venta.vendedor}}</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+
+
