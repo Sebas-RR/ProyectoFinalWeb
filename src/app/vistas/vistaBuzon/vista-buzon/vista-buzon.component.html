@@ -1,20 +1,43 @@
-<div>
+
+<div class="container">
+  <div class="row">
+  <div class="col-md-4">
+    <div class="card">
+      <div class="card-body">
+        <form>
+        
+          <label for="inicial" class="d-flex p-2 bd-highlight ml-3">Fecha inicial: </label>
+          <input type="date" id="desde" name="desde" [(ngModel)]="desde" class="d-flex p-2 bd-highlight ml-3">
+          <label for="hasta" class="d-flex p-2 bd-highlight ml-3">Fecha final: </label>
+          <input type="date" id="hasta" name="hasta" [(ngModel)]="hasta" class="d-flex p-2 bd-highlight ml-3">
+          <button (click)="obtenerBuzonFecha(desde,hasta)" class="btn btn-dark mt-3 ml-3">Consultar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-8">
+    <h4>Listado de fechas</h4>
     <table class="table table-dark">
-        <thead>
-          ...
-        </thead>
-        <tbody>
-          <tr class="table-active">
-            ...
+      <thead>
+          <td>Id</td>
+          <td>Tipo</td>
+          <td>Contenido</td>
+          <td>Fecha</td>
+                                                 
+      </thead>
+      <tbody>
+          <tr *ngFor="let buzon of listbuzon">
+              <td>{{buzon.id}}</td>
+              <td>{{buzon.tipo}}</td>
+              <td>{{buzon.contenido}}</td>
+              <td>{{buzon.fecha}}</td>                  
           </tr>
-          <tr>
-            ...
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td colspan="2" class="table-active">Larry the Bird</td>
-            <td>@twitter</td>
-          </tr>
-        </tbody>
-      </table>
+
+
+      </tbody>
+  </table>
+
+  </div>
+
+  </div>
 </div>
